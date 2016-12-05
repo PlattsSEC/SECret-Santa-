@@ -1,10 +1,6 @@
 #Secret Santa Algorithm
-
-
 import random
-
-
-
+import santasend as santa
 
 def parseEmails(guests):
     fobj = open(guests, 'r')
@@ -17,10 +13,7 @@ def parseEmails(guests):
         p = i.split(',')
         p[0] = p[0][1:-1]
         emails[p[0]] = p[1] + '@plattsburgh.edu'
-
     return emails
-
-
 
 def match(friends, dicManBaby):
     random.shuffle(friends)
@@ -29,19 +22,16 @@ def match(friends, dicManBaby):
     dicManBaby[friends[-1]] = friends[0]    
     return dicManBaby
 
-
-            
-
 guestFile = 'guestList.txt'
-a = parseEmails(guestFile)
+emails = parseEmails(guestFile)
+matches =  match(emails.keys(),{})
 
-b = a.values()
-
-matches = {}
-
-c = match(b, matches)
-
-for key, value in c.iteritems():
-    print key, value
-
-
+for i in matches:
+    message = "Hey {}! You are {}'s SECret Santa!!WOOT!!"
+    print(message.format(i,matches[i]))
+    
+'''
+UNCOMMENT THIS PART WHEN YOU ARE RUNNING THE SCRIPT FOR REAL
+'''
+#    email_message = santa.CreateMessage('me',emails[i],'SECret Santa',message.format(i,matches[i]))
+#    SendMessage(santa.gmail_service,'me',email_message)

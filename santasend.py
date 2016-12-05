@@ -73,5 +73,5 @@ def SendMessage(service, user_id, message):
     except Exception as error:
         print('An error occurred: %s' % error)
 
-message = CreateMessage('me','jus102u@gmail.com','faggot','I shock it')
-SendMessage(gmail_service,'me',message)
+#message = CreateMessage('me','jus102u@gmail.com','faggot','I shock it')
+#SendMessage(gmail_service,'me',message)
