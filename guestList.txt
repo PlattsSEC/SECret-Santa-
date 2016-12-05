@@ -13,3 +13,6 @@
 "Josh Frenia",jfren003
 "Trevan Albright",talbr002
 "Steven Yaboyvince Mills",smill040
+"Joseph Judge",jjudg002
+"Logan Hodgson",lhodg002
+"Robert Love",rlove004
