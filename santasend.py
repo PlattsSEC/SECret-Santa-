@@ -37,13 +37,13 @@ gmail_service = build('gmail', 'v1', http=http)
 # create a message to send
 def CreateMessage(sender, to, subject, message_text):
     """Create a message for an email.
-    
+
     Args:
     sender: Email address of the sender.
     to: Email address of the receiver.
     subject: The subject of the email message.
     message_text: The text of the email message.
-    
+
     Returns:
     An object containing a base64url encoded email object.
     """
@@ -56,13 +56,13 @@ def CreateMessage(sender, to, subject, message_text):
 # send it
 def SendMessage(service, user_id, message):
     """Send an email message.
-    
+
     Args:
     service: Authorized Gmail API service instance.
     user_id: User's email address. The special value "me"
     can be used to indicate the authenticated user.
     message: Message to be sent.
-    
+
     Returns:
     Sent Message.
     """
@@ -72,6 +72,6 @@ def SendMessage(service, user_id, message):
         print(message)
     except Exception as error:
         print('An error occurred: %s' % error)
-        
-message = CreateMessage('jus102u@gmail.com','faggot','prithajnath@gmail.com','TEST')
-SendMessage(message,'prithajnath@gmail.com',gmail_service)
+
+message = CreateMessage('me','jus102u@gmail.com','faggot','I shock it')
+SendMessage(gmail_service,'me',message)
