@@ -14,8 +14,6 @@
 "Trevan Albright",talbr002
 "Steven Yaboyvince Mills",smill040
 "Joseph Judge",jjudg002
-"Logan Hodgson",lhodg002
 "Robert Love",rlove004
 "William Sims",wsims001
 "Alvyn Velazquez",avela011
-"Matthew Madden",mmadd005

@@ -19,7 +19,7 @@ def match(friends, dicManBaby):
     random.shuffle(friends)
     for i in range(len(friends) - 1):
         dicManBaby[friends[i]] = friends[i + 1]
-    dicManBaby[friends[-1]] = friends[0]    
+    dicManBaby[friends[-1]] = friends[0]
     return dicManBaby
 
 guestFile = 'guestList.txt'
@@ -28,10 +28,5 @@ matches =  match(emails.keys(),{})
 
 for i in matches:
     message = "Hey {}! You are {}'s SECret Santa!!WOOT!!"
-    print(message.format(i,matches[i]))
-    
-'''
-UNCOMMENT THIS PART WHEN YOU ARE RUNNING THE SCRIPT FOR REAL
-'''
-#    email_message = santa.CreateMessage('me',emails[i],'SECret Santa',message.format(i,matches[i]))
-#    SendMessage(santa.gmail_service,'me',email_message)
+    email_message = santa.CreateMessage('me',emails[i],'SECret Santa', message.format(i,matches[i]))
+    santa.SendMessage(santa.gmail_service,'me',email_message)
